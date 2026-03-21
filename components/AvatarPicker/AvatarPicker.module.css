@@ -1,0 +1,63 @@
+.picker {
+  width: 300px;
+  height: 300px;
+  border-radius: 12px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.wrapper {
+  cursor: pointer;
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #0b5ed7;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 8px;
+  align-self: stretch;
+  padding: 12px 24px;
+  margin: 0;
+  height: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.reload {
+  opacity: 0;
+}
+
+.input {
+  display: none;
+}
+
+.remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.error {
+  color: red;
+}

@@ -13,8 +13,8 @@ const baseURL = isServer
 export const api = axios.create({
   baseURL,
   withCredentials: true, // Критично для передачи кук
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json",
-  },
+  // headers: {
+  // Accept: "application/json",
+  // "Content-Type": "application/json",
+  // },
 });

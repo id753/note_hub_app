@@ -45,6 +45,11 @@ export interface CreateNoteData {
   tag: "Shopping" | "Meeting" | "Personal" | "Work" | "Todo";
 }
 
+export interface UpdateUserRequest {
+  username?: string;
+  avatar?: string;
+}
+
 // --- Нотатки (Notes) ---
 export const fetchNotes = async (
   page: number,
@@ -114,7 +119,23 @@ export const checkSession = async (): Promise<boolean> => {
   }
 };
 
-export const updateMe = async (payload: Partial<User>): Promise<User> => {
+export const updateMe = async (
+  payload: UpdateUserRequest //payload (JSON) — для текста и чисел
+): Promise<User> => {
   const { data } = await api.patch<User>("/users/me", payload);
   return data;
+};
+
+// export const updateAvatar = async (
+//   formData: FormData //formData (Multipart) — для файлов
+// ): Promise<{ url: string }> => {
+//   const { data } = await api.patch(
+//     "/users/me/avatar",
+//     formData
+
+export const updateAvatar = async (file: File): Promise<string> => {
+  const formData = new FormData();
+  formData.append("avatar", file);
+  const { data } = await api.patch("/users/me/avatar", formData);
+  return data.url;
 };
