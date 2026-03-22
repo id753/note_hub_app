@@ -67,7 +67,7 @@ export default function NotesClient({ initialTag }: NotesClientProps) {
       {notes.length > 0 ? (
         <NoteList notes={notes} />
       ) : (
-        !isLoading && <p>Заметки не найдены.</p>
+        !isLoading && <p>No notes found.</p>
       )}
 
       {/* {isModalOpen && (

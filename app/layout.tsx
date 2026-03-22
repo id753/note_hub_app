@@ -59,7 +59,7 @@ export default function RootLayout({
         <TanStackProvider>
           <AuthProvider>
             <Header />
-            {children}
+            <main>{children}</main>
             {modal}
             <Footer />
           </AuthProvider>
