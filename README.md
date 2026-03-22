@@ -9,8 +9,9 @@
 ## [Backend Code](https://github.com/id753/nodejs-hw)
 
 ## Tech Stack
-### 🎨 Frontend Tech Stack: React, TypeScript; State Management (Redux Toolkit: Thunk, Persist); Styling (Tailwind CSS, CSS Modules); Internationalization (i18next); Notifications (iziToast); Accessibility (a11y); Storage (localStorage); Build Tool (Vite)
-### ⚙️ [Backend](https://github.com/id753/todo-project-api) Tech Stack: Node.js, Express.js, MongoDB, Mongoose; REST API; Validation (Joi, Celebrate); Logging (Pino); Error Handling; Pagination & Search; API Testing (Postman); Deployment (Render) 
+### 🎨 Frontend Tech Stack: Next.js (App Router), React, TypeScript; Zustand (+ persist middleware), TanStack Query, Axios; Next.js Metadata API, SEO, Open Graph
+### ⚙️ [Backend](https://github.com/id753/todo-project-api) Tech Stack: Node.js, Express.js, MongoDB & Mongoose, Joi & Celebrate (validation), Cloudinary (image storage), Nodemailer (emails), bcrypt (password hashing), JWT (password reset tokens), Pino (logging), Multer (file uploads)
+Dev Tools & Environment: dotenv (environment variables), ES Modules (import/export), CORS configuration, async/await, Postman (API testing), Render (deployment)
 
 
 ## Features
