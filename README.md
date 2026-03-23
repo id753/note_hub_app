@@ -31,7 +31,7 @@ Dev Tools & Environment: dotenv (environment variables), ES Modules (import/expo
 - ✅ **SEO & Social Sharing**: Full metadata configuration including Open Graph support for enhanced social media visibility.
 - ✅ **Architecture-First UI**: While the visual styles were provided as part of the technical assignment, I focused on building a clean, scalable architecture and efficient CSS Modules implementation.
 
-## Getting Started (Frontend)
+## 🔢 Getting Started (Frontend)
 Clone the repository
       
     git clone git@github.com:id753/note_hub_app.git
