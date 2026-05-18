@@ -1,5 +1,3 @@
-// app\notes\[id]\page.tsx
-
 import {
   dehydrate,
   HydrationBoundary,
@@ -31,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title: note.title,
         description,
-        url: `https://notehub.com/notes/${id}`,
+        url: `09-auth-eosin-iota.vercel.app/notes/${id}`,
         images: [
           {
             url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
