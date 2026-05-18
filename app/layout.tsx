@@ -7,16 +7,6 @@ import Footer from "@/components/Footer/Footer";
 import TanStackProvider from "../components/TanStackProvider/TanStackProvider";
 import AuthProvider from "@/components/AuthProvider/AuthProvider";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -32,7 +22,7 @@ export const metadata: Metadata = {
     title: "NoteHub App",
     description:
       "A note app is a software application designed for quickly capturing, organizing, and storing digital information, from brief thoughts and checklists to detailed lecture notes and documents.",
-    url: "https://notehub.com/notes", //  замінити на реальний URL після деплою
+    url: "09-auth-eosin-iota.vercel.app/notes",
     images: [
       {
         url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
@@ -41,7 +31,7 @@ export const metadata: Metadata = {
         alt: "NoteHub logo",
       },
     ],
-    type: "website", // Більш коректно для застосунку
+    type: "website",
   },
 };
 

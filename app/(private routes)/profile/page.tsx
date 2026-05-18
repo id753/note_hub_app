@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Profile | NoteHub",
     description: "Manage your account settings and view your profile data.",
-    url: "https://notehub.com/profile",
+    url: "09-auth-eosin-iota.vercel.app/profile",
     images: [
       {
         url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",

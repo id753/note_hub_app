@@ -10,9 +10,7 @@ export default function NoteModalPage() {
   const router = useRouter();
 
   return (
-    // 1. Оболочка модалки (отвечает за фон и закрытие)
     <Modal onClose={() => router.back()}>
-      {/* 2. Контент (отвечает за загрузку данных и отображение текста) */}
       <NotePreviewClient />
     </Modal>
   );

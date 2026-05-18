@@ -40,7 +40,9 @@ function NotePreview() {
           {new Date(note.createdAt).toLocaleDateString()}
         </p>
 
-        <button onClick={() => router.back()}>Повернутися до списку</button>
+        <button className={css.button} onClick={() => router.back()}>
+          Повернутися до списку
+        </button>
       </div>
     </div>
   );

@@ -9,14 +9,15 @@ import { useAuthStore } from "@/lib/store/authStore";
 const LogIn = () => {
   const router = useRouter();
   const [error, setError] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const setUser = useAuthStore((state) => state.setUser);
 
   const handleSubmit = async (formData: FormData) => {
     setError("");
+    setIsLoading(true);
 
     try {
-      // ?
       const formValues = Object.fromEntries(
         formData
       ) as unknown as LoginPayload;
@@ -24,18 +25,23 @@ const LogIn = () => {
       const result = await login(formValues);
 
       if (result) {
-        setUser(result); // Стан змінюється глобально
+        setUser(result);
         router.push("/profile");
       } else {
         setError("Invalid email or password");
+        setIsLoading(false);
       }
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
-      setError(
-        err.response?.data?.message ?? err.message ?? "Oops... some error"
-      );
+      if (err.response?.status === 401) {
+        setError("Invalid email or password. Please try again.");
+      } else {
+        setError("Something went wrong. Try again later.");
+      }
+      setIsLoading(false);
     }
   };
+
   return (
     <main className={css.mainContent}>
       <form action={handleSubmit} className={css.form}>
@@ -49,6 +55,7 @@ const LogIn = () => {
             name="email"
             className={css.input}
             required
+            disabled={isLoading}
           />
         </div>
 
@@ -60,14 +67,21 @@ const LogIn = () => {
             name="password"
             className={css.input}
             required
+            disabled={isLoading}
           />
         </div>
 
         <div className={css.actions}>
-          <button type="submit" className={css.submitButton}>
-            Log in
+          <button
+            type="submit"
+            className={css.submitButton}
+            disabled={isLoading}
+          >
+            {isLoading ? "Signing in..." : "Log in"}
           </button>
         </div>
+
+        {isLoading && <div className={css.loader}>Loading...</div>}
 
         <p className={css.error}>{error}</p>
       </form>

@@ -9,42 +9,40 @@ import { useAuthStore } from "@/lib/store/authStore";
 const SignUp = () => {
   const router = useRouter();
   const [error, setError] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const setUser = useAuthStore((state) => state.setUser);
 
   const handleSubmit = async (formData: FormData) => {
     setError("");
+    setIsLoading(true);
 
     try {
-      // ?
       const formValues = Object.fromEntries(
         formData
       ) as unknown as RegisterPayload;
 
-      // 2. Вызов из clientApi
       const result = await register(formValues);
 
-      // 3. Если ответ успешный то редиректим
       if (result) {
         setUser(result);
-
         router.push("/profile");
       } else {
         setError("Invalid email or password");
+        setIsLoading(false);
       }
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
-      setError(
-        err.response?.data?.message ?? err.message ?? "Oops... some error"
-      );
+      setIsLoading(false);
+      setError("Something went wrong. Please try again later.");
     }
   };
 
   return (
     <main className={css.mainContent}>
-      <h1 className={css.formTitle}>Sign up</h1>
-
       <form action={handleSubmit} className={css.form}>
+        <h1 className={css.formTitle}>Sign up</h1>
+
         <div className={css.formGroup}>
           <label htmlFor="email">Email</label>
           <input
@@ -53,6 +51,7 @@ const SignUp = () => {
             name="email"
             className={css.input}
             required
+            disabled={isLoading}
           />
         </div>
 
@@ -64,15 +63,21 @@ const SignUp = () => {
             name="password"
             className={css.input}
             required
+            disabled={isLoading}
           />
         </div>
 
         <div className={css.actions}>
-          <button type="submit" className={css.submitButton}>
-            Register
+          <button
+            type="submit"
+            className={css.submitButton}
+            disabled={isLoading}
+          >
+            {isLoading ? "Registering..." : "Register"}
           </button>
         </div>
 
+        {isLoading && <div className={css.loader}>Loading...</div>}
         {error && <p className={css.error}>{error}</p>}
       </form>
     </main>

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { checkSession, getMe } from "@/lib/api/clientApi";
 import { useAuthStore } from "@/lib/store/authStore";
+import css from "./AuthProvider.module.css";
 
 export default function AuthProvider({
   children,
@@ -42,7 +43,7 @@ export default function AuthProvider({
   }, [setUser, clearIsAuthenticated, pathname, router]);
 
   if (isLoading) {
-    return <div className="loader">Loading...</div>;
+    return <div className={css.loader}>Loading...</div>;
   }
 
   return <>{children}</>;
