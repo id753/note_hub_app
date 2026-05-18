@@ -4,10 +4,25 @@
 ### NoteHub (individual coursework project) is a sophisticated note-taking platform 🏷️ where I engineered the entire API interaction layer and authentication flow using Next.js App Router. </br> The project showcases a robust architectural approach, including secure 🍪 cookie-based session handling, middleware protection, and state management 🧹 with Zustand and TanStack Query. </br>While the UI was built using provided style guidelines, the core focus remained on building 🧱 a scalable and secure backend-integrated frontend.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/64448477-ddf9-4dc4-9af9-414d64de1273" " alt="NoteHub App Screenshot" width="450" />
+<img   src="https://github.com/user-attachments/assets/ec80a99d-88b4-4ca3-ab9d-1ad3e492d849"  alt="NoteHub App Screenshot" width="450" />
   <br>
   <sub>NoteHub App Screenshot</sub>
 </p>
+<details>
+<summary><b>View Screenshots</b></summary>
+  <p align="center">
+<img width="600" alt="NoteHub App Screenshot" src="https://github.com/user-attachments/assets/45bf4291-79ed-4724-a166-01ff30e49654" />
+  <br>
+  <sub>NoteHub App Screenshot</sub>
+</p>
+  <p align="center">
+ <img width="600"  alt="NoteHub App Screenshot" src="https://github.com/user-attachments/assets/ec80a99d-88b4-4ca3-ab9d-1ad3e492d849" />
+  <br>
+  <sub>NoteHub App Screenshot</sub>
+</p>
+</details>
+
+
 
 
 ## [Live Project](https://09-auth-eosin-iota.vercel.app/) 
