@@ -1,4 +1,3 @@
-// C:\Users\Admin\Desktop\project_new\homework\07-routing-nextjs\app\notes\filter\[...slug]\Notes.client.tsx
 "use client";
 import css from "./NotesPage.module.css";
 import { useState } from "react";
