@@ -1,10 +1,11 @@
+
 # 📚NoteHub APP
 ## A full-stack note-taking web app featuring a custom REST API, secure authentication, and built-in SEO optimization. 
 
 ### NoteHub (individual coursework project) is a sophisticated note-taking platform 🏷️ where I engineered the entire API interaction layer and authentication flow using Next.js App Router. </br> The project showcases a robust architectural approach, including secure 🍪 cookie-based session handling, middleware protection, and state management 🧹 with Zustand and TanStack Query. </br>While the UI was built using provided style guidelines, the core focus remained on building 🧱 a scalable and secure backend-integrated frontend.
 
 <p align="center">
-<img   src="https://github.com/user-attachments/assets/ec80a99d-88b4-4ca3-ab9d-1ad3e492d849"  alt="NoteHub App Screenshot" width="450" />
+<img width="450" alt="Скриншот сделанный 2026-05-18 в 12 59 38" src="https://github.com/user-attachments/assets/4c6eb007-2ae4-433d-94a2-37f67a35475b"   alt="NoteHub App Screenshot" width="450" />
   <br>
   <sub>NoteHub App Screenshot</sub>
 </p>
